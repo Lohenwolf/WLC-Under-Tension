@@ -35,7 +35,7 @@ def calculate_energy(k, x_end, lp, f, ds):
 
 def simulate_filament_with_force(L, lp, f, N_modes=15, steps=5000):
    
-   ## Simulates the filamente using Metropolis-Hastings on the Fourier coefficients ##
+   ## Simulates the filaments using Metropolis-Hastings on the Fourier coefficients ##
    ## f: Force (normalized for kT). f=0 -> random coil, f big -> strained filament. ##
  
     s = np.linspace(0, L, 1000)
@@ -58,7 +58,7 @@ def simulate_filament_with_force(L, lp, f, N_modes=15, steps=5000):
     accepted = 0
     
     # Metropolis loop
-    print(f"Simulation running (Forza F={f})...")
+    print(f"Simulation running (F={f})...")
     for step in range(steps):
         # 1. modifying a random coefficient
         idx = np.random.randint(0, N_modes)
@@ -122,4 +122,5 @@ plt.axis('equal')
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.savefig(f"WLCuT{f_val}.png", dpi=300, bbox_inches='tight')
+
 plt.show()
