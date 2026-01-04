@@ -5,7 +5,7 @@ Instead of simulating discrete beads, this code models the filament by sampling 
 
 ## Physics
 
-The **Worm-like Chain (WLC)** model describes a semi-flexible polymer defined by its contour length $L$ and its persistence length $l_p$ (a measure of stiffness).
+The **Worm-like Chain (WLC)** model describes a semi-flexible polymer defined by its contour length $L$ and its persistence length ξ (a measure of stiffness).
 
 The total energy of the system in this simulation is defined by the Hamiltonian:
 
